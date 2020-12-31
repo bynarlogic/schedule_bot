@@ -1,0 +1,5 @@
+chatterbot==1.1.0
+chatterbot-corpus==1.2.0
+en-core-web-sm==2.1.0
+ipdb==0.13.4
+pip-chill==1.0.0
