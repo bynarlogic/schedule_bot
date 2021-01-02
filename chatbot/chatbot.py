@@ -11,8 +11,15 @@ bot = ChatBot(
     'Terminal',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     logic_adapters=[
-        'chatterbot.logic.BestMatch',
-        'logic.schedule_adapter.Schedule'
+        'logic.schedule_adapter.Schedule',
+         {
+            'import_path': 'chatterbot.logic.BestMatch',
+            'default_response': "I'm sorry I don't understand. I schedule appointments. Is there a date and time you have in mind?",
+            'maximum_similarity_threshold': 0.90
+        }
+    ],
+    preprocessors=[
+        'preprocessors.format_dates'
     ],
     database_uri='sqlite:///database.db'
 )
