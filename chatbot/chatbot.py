@@ -19,7 +19,8 @@ bot = ChatBot(
         }
     ],
     preprocessors=[
-        'preprocessors.format_dates'
+        'preprocessors.format_dates',
+        'chatbot.preprocessors.capitalize_months'
     ],
     database_uri='sqlite:///database.db'
 )
